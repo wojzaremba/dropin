@@ -1,0 +1,49 @@
+[    
+    {
+        "type" : "ImageInput",
+        "file_pattern": "~/data/mnist/",
+        "batch_size": 128,
+        "rows": 28,
+        "cols": 28
+    },
+
+    {
+        "type": "FC",
+        "depth": 800,
+        "function": "RELU"
+    },
+
+    {
+        "type": "Dropin",
+        "p": 0.1,
+    },
+
+    {
+        "type": "Dropout",
+        "p": 0.5,
+    },
+
+    {
+        "type": "FC",
+        "depth": 800,
+        "function": "RELU"
+    },
+
+    {    
+        "type": "FC",
+        "cols": 1,
+        "depth": 10,
+        "function": "LINEAR"
+    },
+
+    {
+        "type": "Softmax",
+        "depth": 10
+    },
+
+    {
+      "type": "Spec",
+      "lr": 0.1,
+      "momentum": 0.9
+    }
+]
